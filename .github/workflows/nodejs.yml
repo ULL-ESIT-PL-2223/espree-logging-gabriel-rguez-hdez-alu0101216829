@@ -33,7 +33,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: ${{ matrix.node-version }}
+          architecture: ${{ matrix.architecture }}
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: npm install
