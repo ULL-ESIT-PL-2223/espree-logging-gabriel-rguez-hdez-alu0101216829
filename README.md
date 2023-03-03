@@ -42,7 +42,7 @@ Por otra parte tenemos la función `addLogging`, cuya responsabilidad es buscar 
 
 ```js
 export function addLogging(code) {
-  const ast = espree.parse(code, {ecmaVersion: 12, loc: true});
+  const ast = espree.parse(code, {ecmaVersion: 6, loc: true});
     estraverse.traverse(ast, {
         enter: function(node, parent) {
             if (node.type === 'FunctionDeclaration' ||
